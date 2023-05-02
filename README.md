@@ -16,7 +16,7 @@ Another way to call a script is to either give an absolute path to the script, o
 ```bash
 [student@servera ~ ] mkdir ~/bin
 [student@servera ~ ] vim ~/bin/scriptname
-[student@servera ~ ] chmod +x scriptname
+[student@servera ~ ] chmod +x ~/bin/scriptname
 [student@servera ~ ] scriptname
 output
 ```
