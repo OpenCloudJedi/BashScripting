@@ -36,17 +36,22 @@ The LIST can be given in a couple of different ways.
 for USER in admin1 admin2 admin3; do
 	usermod -aG admins $USER;
 done
+```
 
-
+```bash
 for  COUNTDOWN in {10..1}; do
 	echo $COUNTDOWN ;
+	sleep 1;
 done
+echo "Blastoff!!!"
+```
 
-
-for DIRECTORY in Documents Downloads Desktop; do
+```bash
+for DIRECTORY in Documents Downloads Desktop Music Pictures; do
 	mkdir ~/${DIRECTORY};
 done
 ```
+
 ### While Loop
 
 The While loop will loop over and over as long as some condition remains true. There are many uses for this and it is used in many ways.
@@ -56,6 +61,7 @@ while true [[ <test_condition> ]]; do
 	commands
 done
 ```
+
 As long as the test condition is true, it will continue to perform that same action over and over.
 
 ```bash
@@ -64,6 +70,7 @@ while true [[ -d /tmp/user ]]; do
 	sleep 5
 done
 ```
+
 ### Until Loop
 
 An Until loop will loop through tasks as long as a condition is not true. As soon as the condition is no longer true, the script will complete.
@@ -73,12 +80,14 @@ until [[ <test_condition> ]]; do
 	commands
 done
 ```
+
 ```bash
 until [[ -f /home/student/removeme ]]; do
 	echo "What\'s causing this message? removeme"
 	sleep 5
 done
 ```
+
 ## Exit codes
 Every command will produce an exit code whenever it finishes. This code let's the administrator know if it was successful or not. A return code of 0 indicates success and any positive number means failure. You could use this code to make a loop continue, or for a conditional statement. Here is an example where we search for user coby in the /etc/passwd file. If he is there, it will return 0 and if not a 1 or higher:
 
